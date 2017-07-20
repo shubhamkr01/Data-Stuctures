@@ -12,32 +12,31 @@ using namespace std;
 
 void findMajorityElement(int a[], int n){
 
-int m[MAX]={0};
+    int m[MAX]={0};
 
-RE(i,n){
-m[a[i]]++;}
+    RE(i,n){
+        m[a[i]]++;}
 
-RE(i,n){
-if(m[a[i]]>n/2){
-    cout<<"Majority Element is "<<a[i]<<endl;
-    return;
-}
-}
+    RE(i,n){
+        if(m[a[i]]>n/2){
+               cout<<"Majority Element is "<<a[i]<<endl;
+               return;
+        }
+    }
 
-cout<<"No majority element"<<endl;
+    cout<<"No majority element"<<endl;
 }
 
 int main(){
-int a[MAX];
-int n; // no. of elements
-cin>>n;
+    int a[MAX];
+    int n; // no. of elements
+    cin>>n;
 
-RE(i,n){
-cin>>a[i];
-}
+    RE(i,n){
+        cin>>a[i];
+    }
 
-findMajorityElement(a,n);
+    findMajorityElement(a,n);
 
-return 0;
-
+    return 0;
 }
