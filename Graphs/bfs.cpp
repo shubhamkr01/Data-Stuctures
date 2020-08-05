@@ -39,36 +39,36 @@ void Graph::bfs (int s)
   cout << s;
   while(!q.empty())
   {
-  	int u = q.front();
-  	q.pop();
-  	
-  	for(auto& i : adj[u])
-  	{
-  	  if(!visited[i])
-  	  {
-  		  visited[i] = true;
-  		  q.push(i);
-  		  cout << " " << i ; 
-  	  }
- 	  }
-	}
+    int u = q.front();
+    q.pop();
+    
+    for(auto& i : adj[u])
+    {
+      if(!visited[i])
+      {
+        visited[i] = true;
+        q.push(i);
+        cout << " " << i ; 
+      }
+    }
+  }
   return;
 }
 
 int main()
 {
-	Graph g;
+  Graph g;
 
-	g.setV(5);
-	g.addEdge(0, 1);
-	g.addEdge(0, 3);
-	g.addEdge(1, 2);
-	g.addEdge(1, 3);
-	g.addEdge(2, 4);
-	g.addEdge(0, 4);
-	g.addEdge(3, 4);
-	g.addEdge(4, 0);
-	
-	g.bfs(0);
-return 0;
+  g.setV(5);
+  g.addEdge(0, 1);
+  g.addEdge(0, 3);
+  g.addEdge(1, 2);
+  g.addEdge(1, 3);
+  g.addEdge(2, 4);
+  g.addEdge(0, 4);
+  g.addEdge(3, 4);
+  g.addEdge(4, 0);
+  
+  g.bfs(0);
+  return 0;
 }
