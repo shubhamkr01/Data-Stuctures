@@ -28,25 +28,25 @@ void Graph::addEdge(int u, int v)
 
 void Graph::dfs(int s)
 {
-	//visited vector
-	static vector<bool> visited(v, false);
-	
-	//check current
-	if(!visited[s])
-	{
-		visited[s] = true;
-		cout<<s << " ";
-	}
-	
-	//recursive call
-	for(auto& i : adj[s])
-	{
-		if(!visited[i])
-		{
-			dfs(i);
-		}
-	}	
-	return;
+  //visited vector
+  static vector<bool> visited(v, false);
+  
+  //check current
+  if(!visited[s])
+  {
+    visited[s] = true;
+    cout<<s << " ";
+  }
+  
+  //recursive call
+  for(auto& i : adj[s])
+  {
+    if(!visited[i])
+    {
+      dfs(i);
+    }
+  }	
+  return;
 }
 
 
